@@ -30,9 +30,9 @@ def approximate_sterling(count):
 	print("SINGLE PRECISION: ")
 	for n in range (1, count):
 		fact  = fact * n
-		approx = np.float32(math.sqrt(2.0 * math.pi * n) * math.exp(-n) * math.pow(n, n))
+		approx = np.float32(math.sqrt(2.0 * np.float32(math.pi) * n) * np.float32(math.exp(-n)) * math.pow(n, n))
 		abserr = np.float32(math.fabs(fact - approx))
-		relerr = np.float32(abserr/fact)
+		relerr = np.float32(abserr/fact)	
 		print("n = %s, sterling approximation = %s, absolute error = %s, relative error = %s" 
 			   % (n, approx, abserr, relerr))
 

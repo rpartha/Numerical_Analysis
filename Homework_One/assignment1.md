@@ -47,11 +47,11 @@ def approximate_sterling(count):
 	print("SINGLE PRECISION: ")
 	for n in range (1, count):
 		fact  = fact * n
-		approx = np.float32(math.sqrt(2.0 * math.pi * n) * math.exp(-n) * math.pow(n, n))
+		approx = np.float32(math.sqrt(2.0 * np.float32(math.pi) * n) * np.float32(math.exp(-n)) * math.pow(n, n))
 		abserr = np.float32(math.fabs(fact - approx))
-		relerr = np.float32(abserr/fact)
+		relerr = np.float32(abserr/fact)	
 		print("n = %s, sterling approximation = %s, absolute error = %s, relative error = %s" 
-		       % (n, approx, abserr, relerr))
+			   % (n, approx, abserr, relerr))
 
 #execute method for n = 1,2,...,10
 approximate_sterling(11) 
@@ -59,7 +59,7 @@ approximate_sterling(11)
 
 Running the above code would generate an output like so:
 
-<img src = "https://lh3.googleusercontent.com/aaujQcwSlEJjQPHz-uQDIlmARCCqqiMc_Mqg5p3D0cGXtyyi8m6XN2Of2Py5g-kK7xvu2p0ZsbZzYX-YGy6J_W1ixuOnMTx4sF-Bk1f-t4t85IYA-afjgHEGJmkJ_ZDEUAlIkFM4DTQ=w1120-h403-no">
+<img src = "../Homework_One/sterling.png">
 
 From the output, we can see that for both single and double precision, as *n* increases, the absolute error **increases** but the relative error **decreases**. Python3 defaults to double precision, so switching to single precision does not affect the ordering of the output. 
 
