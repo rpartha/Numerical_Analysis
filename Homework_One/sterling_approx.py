@@ -2,9 +2,9 @@ import numpy as np
 import math as math
 
 def power32(a, b):
-	if(b == 0): return np.float16(1)
-	elif(b == 1): return np.float16(1)
-	else: return np.float16(a * power(a, b-1))
+	if(b == 0): return np.float32(1)
+	elif(b == 1): return np.float32(1)
+	else: return np.float32(a * power(a, b-1))
 
 # compute the sterling approximation for 
 # double and single precision
@@ -38,10 +38,10 @@ def approximate_sterling(count):
 	
 	for n in range (1, count):
 		fact  = fact * n
-		root = np.float16(math.sqrt(np.float16(np.float16(2.0) * np.float16(math.pi)) * np.float16(n))
-		expo = power32(np.float16(math.e), np.float16(-n))
-		power = power32(np.float16(n), np.float16(n))
-		approx = np.float16(np.float16(root * expo)) * power)
+		root = np.float32(math.sqrt(np.float32(np.float32(2.0) * np.float32(math.pi)) * np.float32(n))
+		expo = power32(np.float32(math.e), np.float32(-n))
+		power = power32(np.float32(n), np.float32(n))
+		approx = np.float32(np.float32(root * expo)) * power)
 		abserr = math.fabs(fact - approx)
 		relerr = abserr/fact
 		print("n = %s, sterling approximation = %s, absolute error = %s, relative error = %s" 
