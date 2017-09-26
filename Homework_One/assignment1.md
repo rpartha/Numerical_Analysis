@@ -5,7 +5,62 @@ Ramaseshan Parthasarathy(rp770)
 
 ## Problem 1
 
-Akhil
+### Errors:
+```
+a.
+Absolute error: 0.14159265358979312
+Relative error: 0.04507034144862795
+b.
+Absolute error: 0.0015926535897929917
+Relative error: 0.0005069573828972128
+c.
+Absolute error: 0.0012644892673496777
+Relative error: 0.0004024994347707008
+```
+
+### Code:
+```Go
+package main
+
+import (
+	"fmt"
+	"math"
+	"strconv"
+)
+
+func printFloat(text string, fl float64) {
+	fmt.Println(text, strconv.FormatFloat(fl, 'f', -1, 64))
+}
+
+func absoluteError(value, approximation float64) float64 {
+	return math.Abs(value - approximation)
+}
+
+func relativeError(value, approximation float64) float64 {
+	return absoluteError(value, approximation) / math.Abs(value)
+}
+
+func main() {
+	var pi, approximation float64
+
+	pi = math.Pi
+
+	approximation = 3
+	fmt.Println("a.")
+	printFloat("Absolute error:", absoluteError(pi, approximation))
+	printFloat("Relative error:", relativeError(pi, approximation))
+
+	approximation = 3.14
+	fmt.Println("b.")
+	printFloat("Absolute error:", absoluteError(pi, approximation))
+	printFloat("Relative error:", relativeError(pi, approximation))
+
+	approximation = 22.0 / 7.0
+	fmt.Println("c.")
+	printFloat("Absolute error:", absoluteError(pi, approximation))
+	printFloat("Relative error:", relativeError(pi, approximation))
+}
+```
 
 ## Problem 2
 
