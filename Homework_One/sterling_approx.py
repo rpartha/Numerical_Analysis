@@ -4,7 +4,7 @@ import math as math
 def power32(a, b):
 	if(b == 0): return np.float32(1)
 	elif(b == 1): return np.float32(1)
-	else: return np.float32(a * power(a, b-1))
+	else: return np.float32(a * power32(a, b-1))
 
 # compute the sterling approximation for 
 # double and single precision
