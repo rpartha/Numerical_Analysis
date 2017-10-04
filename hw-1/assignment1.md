@@ -45,7 +45,7 @@ Relative error: 0.00040245
 
 ## Problem 2
 
-Machine epislon is stated to be the smallest ε such that 1 - ε < 1 < 1 + ε. It is the _smallest_ quantity representable by the computer and provides spacing between machine representable integers. In a single precision, it can store apprimxately 7 digits (≈ 2^23) while in double precision it can store up to 15 digits (≈ 2^56). During floating-point computations, the machine epsilon forms an upper bound on relative error. Thus, the inequality 1 + ε ≠ 1 holds true. 
+Machine epislon is stated to be the smallest &epsilon; such that 1 - &epsilon; < 1 < 1 + &epsilon;. It is the _smallest_ quantity representable by the computer and provides spacing between machine representable integers. In a single precision, it can store apprimxately 7 digits (&asymp; 2<sup>-23</sup>) while in double precision it can store up to 15 digits (&asymp; 2<sup>-56</sup>). During floating-point computations, the machine epsilon forms an upper bound on relative error. Thus, the inequality 1 + &epsilon; ≠ 1 holds true. 
 
 ## Problem 3
 The code to compute the sterling  approximation is as follows:
