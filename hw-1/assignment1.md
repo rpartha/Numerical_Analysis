@@ -89,7 +89,7 @@ def approximate_sterling(count):
 	
 	for n in range (1, count):
 		fact  = fact * n
-		root = np.float32(math.sqrt(np.float32(np.float32(2.0) * np.float32(math.pi)) * np.float32(n)))
+		root = np.float32(math.sqrt(np.float32(np.float32(2.0)*np.float32(math.pi))*np.float32(n)))
 		expo = power32(np.float32(math.e), np.float32(-n))
 		power = power32(np.float32(n), np.float32(n))
 		approx = np.float32(np.float32(root * expo)) * power
