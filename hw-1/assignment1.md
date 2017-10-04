@@ -5,7 +5,7 @@ Tarun Sreenathan
 
 ## Problem 1
 
-### Code:
+The code to compute absolute and relative error given approximation is as follows:
 ```python
 import numpy as np
 import math as math
@@ -28,7 +28,7 @@ print("c.")
 computeError(np.float32(math.pi), np.float32(22/7.0))
 ```
 
-### Errors:
+The above code generated the following errors for pi given three different approximations:
 ```
 Using single precision:
 
@@ -110,11 +110,27 @@ From the output, we can see that for both single and double precision, as *n* in
 
 ## Problem 4 
 
-Akhil
+<a href="https://www.codecogs.com/eqnedit.php?latex=\inline&space;\left&space;\|&space;x&space;\right&space;\|&space;\right&space;\|_{\infty}&space;\leq&space;\left&space;\|&space;x&space;\right&space;\|&space;\right&space;\|_{1}&space;\leq&space;n&space;\cdot&space;\left&space;\|&space;x&space;\right&space;\|&space;\right&space;\|_{\infty}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\inline&space;\left&space;\|&space;x&space;\right&space;\|&space;\right&space;\|_{\infty}&space;\leq&space;\left&space;\|&space;x&space;\right&space;\|&space;\right&space;\|_{1}&space;\leq&space;n&space;\cdot&space;\left&space;\|&space;x&space;\right&space;\|&space;\right&space;\|_{\infty}" title="\left \| x \right \| \right \|_{\infty} \leq \left \| x \right \| \right \|_{1} \leq n \cdot \left \| x \right \| \right \|_{\infty}" /></a>  
+<a href="https://www.codecogs.com/eqnedit.php?latex=\inline&space;\left&space;\|&space;x&space;\right&space;\|&space;\right&space;\|_{2}&space;\leq&space;\left&space;\|&space;x&space;\right&space;\|&space;\right&space;\|_{1}&space;\leq&space;\sqrt{n}&space;\cdot&space;\left&space;\|&space;x&space;\right&space;\|&space;\right&space;\|_{2}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\inline&space;\left&space;\|&space;x&space;\right&space;\|&space;\right&space;\|_{2}&space;\leq&space;\left&space;\|&space;x&space;\right&space;\|&space;\right&space;\|_{1}&space;\leq&space;\sqrt{n}&space;\cdot&space;\left&space;\|&space;x&space;\right&space;\|&space;\right&space;\|_{2}" title="\left \| x \right \| \right \|_{2} \leq \left \| x \right \| \right \|_{1} \leq \sqrt{n} \cdot \left \| x \right \| \right \|_{2}" /></a>
+
+
+
+<a href="https://www.codecogs.com/eqnedit.php?latex=\inline&space;\left&space;\|&space;x&space;\right&space;\|&space;\right&space;\|_{1}&space;\leq&space;\sqrt{n}&space;\cdot&space;\left&space;\|&space;x&space;\right&space;\|&space;\right&space;\|_{2}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\inline&space;\left&space;\|&space;x&space;\right&space;\|&space;\right&space;\|_{1}&space;\leq&space;\sqrt{n}&space;\cdot&space;\left&space;\|&space;x&space;\right&space;\|&space;\right&space;\|_{2}" title="\left \| x \right \| \right \|_{1} \leq \sqrt{n} \cdot \left \| x \right \| \right \|_{2}" /></a>  
+<a href="https://www.codecogs.com/eqnedit.php?latex=\inline&space;\frac{\left&space;\|&space;x&space;\right&space;\|_{1}}{\sqrt{n}}&space;\leq&space;\left&space;\|&space;x&space;\right&space;\|_{2},&space;\:&space;n&space;>&space;0" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\inline&space;\frac{\left&space;\|&space;x&space;\right&space;\|_{1}}{\sqrt{n}}&space;\leq&space;\left&space;\|&space;x&space;\right&space;\|_{2},&space;\:&space;n&space;>&space;0" title="\frac{\left \| x \right \|_{1}}{\sqrt{n}} \leq \left \| x \right \|_{2}, \: n > 0" /></a>
+
+
+
+<a href="https://www.codecogs.com/eqnedit.php?latex=\inline&space;\small&space;\left.&space;\begin{matrix}\frac{\left&space;\|&space;x&space;\right&space;\|_{1}}{\sqrt{n}}&space;\leq&space;\left&space;\|&space;x&space;\right&space;\|_{2}&space;\leq&space;\left&space;\|&space;x&space;\right&space;\|_{1}\\&space;\left&space;\|&space;x&space;\right&space;\|_{\infty}&space;\leq&space;\left&space;\|&space;x&space;\right&space;\|_{1}&space;\end{matrix}&space;\right&space;\}\Rightarrow&space;\left.\begin{matrix}\frac{\left&space;\|&space;x&space;\right&space;\|_{\infty}}{\sqrt{n}}&space;\leq&space;\left&space;\|&space;x&space;\right&space;\|_{2}&space;\leq&space;\left&space;\|&space;x&space;\right&space;\|_{1}\\&space;\left&space;\|&space;x&space;\right&space;\|_{1}&space;\leq&space;n&space;\cdot&space;\left&space;\|&space;x&space;\right&space;\|_{\infty}&space;\end{matrix}\right&space;\}\Rightarrow&space;\frac{\left&space;\|&space;x&space;\right&space;\|_{\infty}}{\sqrt{n}}&space;\leq&space;\left&space;\|&space;x&space;\right&space;\|_{2}&space;\leq&space;n&space;\cdot&space;\left&space;\|&space;x&space;\right&space;\|_{\infty}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\inline&space;\small&space;\left.&space;\begin{matrix}\frac{\left&space;\|&space;x&space;\right&space;\|_{1}}{\sqrt{n}}&space;\leq&space;\left&space;\|&space;x&space;\right&space;\|_{2}&space;\leq&space;\left&space;\|&space;x&space;\right&space;\|_{1}\\&space;\left&space;\|&space;x&space;\right&space;\|_{\infty}&space;\leq&space;\left&space;\|&space;x&space;\right&space;\|_{1}&space;\end{matrix}&space;\right&space;\}\Rightarrow&space;\left.\begin{matrix}\frac{\left&space;\|&space;x&space;\right&space;\|_{\infty}}{\sqrt{n}}&space;\leq&space;\left&space;\|&space;x&space;\right&space;\|_{2}&space;\leq&space;\left&space;\|&space;x&space;\right&space;\|_{1}\\&space;\left&space;\|&space;x&space;\right&space;\|_{1}&space;\leq&space;n&space;\cdot&space;\left&space;\|&space;x&space;\right&space;\|_{\infty}&space;\end{matrix}\right&space;\}\Rightarrow&space;\frac{\left&space;\|&space;x&space;\right&space;\|_{\infty}}{\sqrt{n}}&space;\leq&space;\left&space;\|&space;x&space;\right&space;\|_{2}&space;\leq&space;n&space;\cdot&space;\left&space;\|&space;x&space;\right&space;\|_{\infty}" title="\small \left. \begin{matrix}\frac{\left \| x \right \|_{1}}{\sqrt{n}} \leq \left \| x \right \|_{2} \leq \left \| x \right \|_{1}\\ \left \| x \right \|_{\infty} \leq \left \| x \right \|_{1} \end{matrix} \right \}\Rightarrow \left.\begin{matrix}\frac{\left \| x \right \|_{\infty}}{\sqrt{n}} \leq \left \| x \right \|_{2} \leq \left \| x \right \|_{1}\\ \left \| x \right \|_{1} \leq n \cdot \left \| x \right \|_{\infty} \end{matrix}\right \}\Rightarrow \frac{\left \| x \right \|_{\infty}}{\sqrt{n}} \leq \left \| x \right \|_{2} \leq n \cdot \left \| x \right \|_{\infty}" /></a>  
+
+<a href="https://www.codecogs.com/eqnedit.php?latex=\inline&space;\texttt{Two&space;vector&space;norms}&space;\left&space;\|&space;x&space;\right&space;\|_{a}&space;\texttt{and&space;}&space;\left&space;\|&space;x&space;\right&space;\|_{b}&space;\texttt{&space;are&space;considered&space;equivalent&space;if&space;there&space;exist&space;real&space;numbers&space;c,d&space;>&space;0&space;such&space;that:}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\inline&space;\texttt{Two&space;vector&space;norms}&space;\left&space;\|&space;x&space;\right&space;\|_{a}&space;\texttt{and&space;}&space;\left&space;\|&space;x&space;\right&space;\|_{b}&space;\texttt{&space;are&space;considered&space;equivalent&space;if&space;there&space;exist&space;real&space;numbers&space;c,d&space;>&space;0&space;such&space;that:}" title="\texttt{Two vector norms} \left \| x \right \|_{a} \texttt{and } \left \| x \right \|_{b} \texttt{ are considered equivalent if there exist real numbers c,d > 0 such that:}" /></a>  
+<a href="https://www.codecogs.com/eqnedit.php?latex=\inline&space;\dpi{120}&space;\small&space;{\color{Red}&space;c\left&space;\|&space;x&space;\right&space;\|_{a}&space;\leq&space;\left&space;\|&space;x&space;\right&space;\|_{b}&space;\leq&space;d\left&space;\|&space;x&space;\right&space;\|_{a}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\inline&space;\dpi{120}&space;\small&space;{\color{Red}&space;c\left&space;\|&space;x&space;\right&space;\|_{a}&space;\leq&space;\left&space;\|&space;x&space;\right&space;\|_{b}&space;\leq&space;d\left&space;\|&space;x&space;\right&space;\|_{a}}" title="\small {\color{Red} c\left \| x \right \|_{a} \leq \left \| x \right \|_{b} \leq d\left \| x \right \|_{a}}" /></a>  
+
+<a href="https://www.codecogs.com/eqnedit.php?latex=\inline&space;{\color{Blue}&space;\therefore&space;\left&space;\|&space;x&space;\right&space;\|_{2}&space;\equiv&space;\left&space;\|&space;x&space;\right&space;\|_{\infty}&space;}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\inline&space;{\color{Blue}&space;\therefore&space;\left&space;\|&space;x&space;\right&space;\|_{2}&space;\equiv&space;\left&space;\|&space;x&space;\right&space;\|_{\infty}&space;}" title="{\color{Blue} \therefore \left \| x \right \|_{2} \equiv \left \| x \right \|_{\infty} }" /></a>
+
 
 ## Problem 5
 
-The modifieed code is as follows:
+The modified code is as follows:
 
 ```python
 # blur.py
