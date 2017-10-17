@@ -22,7 +22,8 @@ def gauss_elim_32(A):
 			A[i,k] = np.float32(A[i,k]) / np.float32(A[k,k])
 		for j in range (k+1, n):
 			for i in range (k+1, n):
-				A[i,j] = np.float32(A[i,j]) -  np.float32(np.float32(A[i,k]) * np.float32(A[k,j]))
+				A[i,j] = np.float32(A[i,j]) -  \
+				         np.float32(np.float32(A[i,k]) * np.float32(A[k,j]))
 
 	L = np.tril(A,np.float32(0))
 	for kk in range(n):
@@ -72,7 +73,8 @@ def resid(A, b, x):
 
 def main():
 	
-	A = np.matrix([[21.0,67.0,88.0,73.0],[76.0,83.0,7.0,20.0],[0.0,85.0,56.0,54.0],[19.3,43.0,30.2,29.4]])
+	A = np.matrix([[21.0,67.0,88.0,73.0],[76.0,83.0,7.0,20.0],
+				  [0.0,85.0,56.0,54.0],[19.3,43.0,30.2,29.4]])
 	A_copy = A.copy()
 	b = np.array([141.0,109.0,218.0,93.7])
 
@@ -84,7 +86,7 @@ def main():
 	L_single = L.astype(np.float32)
 	U_single = U.astype(np.float32)
 
-	epsilon = math.pow(10,-14)
+	epsilon = 10e-15
 
 	x = np.zeros(4)
 	diff = np.zeros(4)
@@ -129,7 +131,7 @@ def main():
 		#compute difference of new and old vectors
 		diff = [(x_new[i] - x_old[i]) for i in range(0,4)]
 
-		#compute the norm
+		#compute the L_infinity norm
 		norm = la.norm(diff, np.inf)
 
 		x_old = x_new 
