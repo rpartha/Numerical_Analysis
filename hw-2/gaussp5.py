@@ -61,9 +61,10 @@ def back_sub(A,b,x):
 
 def main():
 	x_exact = np.array([1,1])
+	print '  epsilon		     error'
+	print '------------------------------------------'
 	for k in range(1,11):
 		eps = math.pow(10, -2*k)
-		print 'epsilon: ', eps
 		A = np.matrix([[eps,1],[1,1]])
 		b = np.array([(1+eps),2])
 		L,U = gauss_elim(A)
@@ -71,7 +72,7 @@ def main():
 		y=np.zeros(2)
 		forward_sub(L,b,y)
 		back_sub(U,y,x)
-		print 'error: ', la.norm([(x[i]-x_exact[i]) for i in range (0,2)])
+		print '  ', eps, '\t\t', la.norm([(x[i]-x_exact[i]) for i in range (0,2)])
 
 if __name__ == "__main__":
 	main()
