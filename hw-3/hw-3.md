@@ -1,8 +1,8 @@
 # Homework 3
 # Ramaseshan Parthasarathy, Saurabh Prasad
 
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="gmarkdown.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">  
+<link rel="stylesheet" href="gmarkdown.css">  
 <style>
 	.markdown-body {
 		box-sizing: border-box;
