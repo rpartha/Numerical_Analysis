@@ -1,7 +1,23 @@
-# Homework 3
-# Ramaseshan Parthasarathy, Saurabh Prasad
+# Homework 3  
+
+Ramaseshan Parthasarathy, Saurabh Prasad  
+11/01/17
 
 ## Problem 1
+
+1. to be done
+
+2. 
+
+<a href="https://www.codecogs.com/eqnedit.php?latex=Ax&space;=&space;b&space;\newline&space;\newline&space;(D-L-U)x&space;\hspace{1mm}&space;=&space;\hspace{1mm}&space;b&space;\newline&space;\newline&space;Dx&space;=&space;(L&plus;U)x&space;\hspace{1mm}&space;&plus;&space;\hspace{1mm}&space;b&space;\newline&space;\newline&space;x&space;=&space;D^{-1}(L&plus;U)x&space;\hspace{1mm}&space;&plus;&space;\hspace{1mm}&space;D^{-1}b&space;\newline&space;\newline&space;x^{(k)}&space;=&space;D^{-1}(L&plus;U)x^{(k-1)}&space;\hspace{1mm}&space;&plus;&space;\hspace{1mm}&space;D^{-1}b&space;\newline&space;\newline&space;x^{(k&plus;1)}&space;=&space;D^{-1}(L&plus;U)x^{(k)}&space;\hspace{1mm}&space;&plus;&space;\hspace{1mm}&space;D^{-1}b&space;\newline&space;\newline&space;\mathbf{x^{(k&plus;1)}&space;=&space;Tx^{(k)}&space;\hspace{1mm}&space;&plus;&space;\hspace{1mm}&space;c}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?Ax&space;=&space;b&space;\newline&space;\newline&space;(D-L-U)x&space;\hspace{1mm}&space;=&space;\hspace{1mm}&space;b&space;\newline&space;\newline&space;Dx&space;=&space;(L&plus;U)x&space;\hspace{1mm}&space;&plus;&space;\hspace{1mm}&space;b&space;\newline&space;\newline&space;x&space;=&space;D^{-1}(L&plus;U)x&space;\hspace{1mm}&space;&plus;&space;\hspace{1mm}&space;D^{-1}b&space;\newline&space;\newline&space;x^{(k)}&space;=&space;D^{-1}(L&plus;U)x^{(k-1)}&space;\hspace{1mm}&space;&plus;&space;\hspace{1mm}&space;D^{-1}b&space;\newline&space;\newline&space;x^{(k&plus;1)}&space;=&space;D^{-1}(L&plus;U)x^{(k)}&space;\hspace{1mm}&space;&plus;&space;\hspace{1mm}&space;D^{-1}b&space;\newline&space;\newline&space;\mathbf{x^{(k&plus;1)}&space;=&space;Tx^{(k)}&space;\hspace{1mm}&space;&plus;&space;\hspace{1mm}&space;c}" title="Ax = b \newline \newline (D-L-U)x \hspace{1mm} = \hspace{1mm} b \newline \newline Dx = (L+U)x \hspace{1mm} + \hspace{1mm} b \newline \newline x = D^{-1}(L+U)x \hspace{1mm} + \hspace{1mm} D^{-1}b \newline \newline x^{(k)} = D^{-1}(L+U)x^{(k-1)} \hspace{1mm} + \hspace{1mm} D^{-1}b \newline \newline x^{(k+1)} = D^{-1}(L+U)x^{(k)} \hspace{1mm} + \hspace{1mm} D^{-1}b \newline \newline \mathbf{x^{(k+1)} = Tx^{(k)} \hspace{1mm} + \hspace{1mm} c}" /></a>  
+
+3. 
+
+<a href="https://www.codecogs.com/eqnedit.php?latex=x^{*}&space;=&space;Tx^{*}&space;&plus;&space;c&space;\newline&space;\newline&space;x^{(k&plus;1)}&space;\hspace{1mm}&space;-&space;\hspace{1mm}&space;x^{*}&space;=&space;Tx^{(k)}&space;&plus;&space;c&space;-&space;(Tx^{*}&space;&plus;&space;c)&space;\newline&space;\newline&space;e^{(k&plus;1)}&space;=&space;T(x^{(k)}&space;-&space;x^{*})&space;\newline&space;\newline&space;\mathbf{e^{(k&plus;1)}&space;=&space;Te^{(k)}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?x^{*}&space;=&space;Tx^{*}&space;&plus;&space;c&space;\newline&space;\newline&space;x^{(k&plus;1)}&space;\hspace{1mm}&space;-&space;\hspace{1mm}&space;x^{*}&space;=&space;Tx^{(k)}&space;&plus;&space;c&space;-&space;(Tx^{*}&space;&plus;&space;c)&space;\newline&space;\newline&space;e^{(k&plus;1)}&space;=&space;T(x^{(k)}&space;-&space;x^{*})&space;\newline&space;\newline&space;\mathbf{e^{(k&plus;1)}&space;=&space;Te^{(k)}}" title="x^{*} = Tx^{*} + c \newline \newline x^{(k+1)} \hspace{1mm} - \hspace{1mm} x^{*} = Tx^{(k)} + c - (Tx^{*} + c) \newline \newline e^{(k+1)} = T(x^{(k)} - x^{*}) \newline \newline \mathbf{e^{(k+1)} = Te^{(k)}}" /></a>  
+
+4. to be done
+
+5. to be done
 
 ## Problem 2
 
@@ -239,21 +255,87 @@ print(np.linalg.cond(A.transpose().dot(A)))
 3. The code below computes the solution to the matrix as well as the condition number:
 
     ```python
-        import numpy as np
-        from numpy import linalg as linalg
+    import numpy as np
+    from numpy import linalg as linalg
 
-        def main():
-            A = np.array([[0.1,0.2,0.3],[0.4,0.5,0.6],[0.7,0.8,0.9]])
-            b = np.array([0.1,0.3,0.5])
+    def gauss_elim(A):
+        m=A.shape[0]
+        n=A.shape[1]
+        U = np.zeros((m,n))
+        L = np.zeros((m,n))
 
-            x= np.linalg.solve(A,b)
-            k_cond = np.linalg.cond(A)
+        if(m!=n):
+            print('Not Square Matrix')
+            return
 
-            print x
-            print 'condition number: ', k_cond
+        for k in range(0, n-1):
+            if A[k,k] == 0:
+                return
+            for i in range(k+1, n):
+                A[i,k] = A[i,k] / A[k,k]
+            for j in range (k+1, n):
+                for i in range (k+1, n):
+                    A[i,j] -= A[i,k] * A[k,j]
 
-        if __name__ == "__main__":
-            main()
+        L = np.tril(A,0)
+        for kk in range(n):
+            for i in range(kk+1, n):
+                L[kk,kk] = 1
+        L[kk,kk]=1
+
+        U = np.triu(A,0)
+
+        return (L,U)
+
+    def forward_sub(A,b,x):
+        m=A.shape[0]
+        n=A.shape[1]
+        if(m!=n):
+            print 'Matrix is not square!'
+            return
+        for j in range(0,n):
+            #if A[j,j] == 0:
+            #	print 'Matrix is singular!'
+            #	return          # matrix is singular
+            x[j] = b[j]/A[j,j]
+            for i in range(j+1,n):
+                b[i] = b[i] - A[i,j]*x[j]
+
+    def back_sub(A,b,x):
+        m=A.shape[0]
+        n=A.shape[1]
+        if(m!=n):
+            print 'Matrix is not square!'
+            return
+        for j in range(n-1,-1,-1):
+            #if A[j,j] == 0:
+            #	print 'Matrix is singular!'
+            #	return          # matrix is singular
+            x[j] = b[j]/A[j,j]
+            for i in range(0,j):
+                b[i] = b[i] - A[i,j]*x[j]
+
+
+    def main():
+        A = np.matrix([[0.1,0.2,0.3],[0.4,0.5,0.6],[0.7,0.8,0.9]])
+        b = np.array([0.1,0.3,0.5])
+
+        k_cond = np.linalg.cond(A)
+
+        x = np.zeros(3)
+        y = np.zeros(3)
+
+        L,U = gauss_elim(A)
+        forward_sub(L,b,y)
+        back_sub(U,y,x)
+
+        print (x)
+        print 'condition number: ', k_cond
+        print(np.finfo(float).eps)
+
+    if __name__ == "__main__":
+        main()
+
     ```
 
     The output of the above code is as follows:
