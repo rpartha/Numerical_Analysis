@@ -61,9 +61,10 @@ def back_sub(A,b,x):
 
 def main():
     A = np.matrix([[0.1,0.2,0.3],[0.4,0.5,0.6],[0.7,0.8,0.9]])
+    A_inv = np.linalg.inv(A)
     b = np.array([0.1,0.3,0.5])
 
-    k_cond = np.linalg.cond(A)
+    k_cond = np.linalg.norm(A, np.inf) * np.linalg.norm(A_inv, np.inf)
 
     x = np.zeros(3)
     y = np.zeros(3)
@@ -71,8 +72,6 @@ def main():
     L,U = gauss_elim(A)
     forward_sub(L,b,y)
     back_sub(U,y,x)
-    
-    
 
     print (x)
     print 'condition number: ', k_cond
