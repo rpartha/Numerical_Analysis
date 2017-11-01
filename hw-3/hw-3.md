@@ -25,9 +25,15 @@ Ramaseshan Parthasarathy, Saurabh Prasad
 
     <a href="https://www.codecogs.com/eqnedit.php?latex=\inline&space;\left&space;\|&space;T&space;\right&space;\|_{\infty}&space;=&space;\underset{i}{max}&space;\sum_{i&space;\neq&space;j}^{n}&space;\frac{a_{ij}}{a_{ii}}&space;<&space;1&space;\texttt{&space;since&space;}&space;|a_{ii}|&space;>&space;\sum_{i&space;\neq&space;j}^{n}&space;|a_{ij}|&space;\texttt{&space;and&space;}&space;D^{-1}_{ij}&space;=&space;\frac{1}{a_{ii}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\inline&space;\left&space;\|&space;T&space;\right&space;\|_{\infty}&space;=&space;\underset{i}{max}&space;\sum_{i&space;\neq&space;j}^{n}&space;\frac{a_{ij}}{a_{ii}}&space;<&space;1&space;\texttt{&space;since&space;}&space;|a_{ii}|&space;>&space;\sum_{i&space;\neq&space;j}^{n}&space;|a_{ij}|&space;\texttt{&space;and&space;}&space;D^{-1}_{ij}&space;=&space;\frac{1}{a_{ii}}" title="\left \| T \right \|_{\infty} = \underset{i}{max} \sum_{i \neq j}^{n} \frac{a_{ij}}{a_{ii}} < 1 \texttt{ since } |a_{ii}| > \sum_{i \neq j}^{n} |a_{ij}| \texttt{ and } D^{-1}_{ij} = \frac{1}{a_{ii}}" /></a>
 
-5. Combining steps 1 - 4 would arrive at the conclusion that
+5. Combining steps 1 - 4 would sue the following steps to arrive at the final inequality:
 
-    <a href="https://www.codecogs.com/eqnedit.php?latex=\inline&space;\left&space;\|&space;e^{(k)}&space;\right&space;\|_{\infty}&space;\leq&space;\left&space;\|&space;T&space;\right&space;\|_{\infty}^{k}\left&space;\|&space;e^{(0)}&space;\right&space;\|_{\infty}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\inline&space;\left&space;\|&space;e^{(k)}&space;\right&space;\|_{\infty}&space;\leq&space;\left&space;\|&space;T&space;\right&space;\|_{\infty}^{k}\left&space;\|&space;e^{(0)}&space;\right&space;\|_{\infty}" title="\left \| e^{(k)} \right \|_{\infty} \leq \left \| T \right \|_{\infty}^{k}\left \| e^{(0)} \right \|_{\infty}" /></a>
+    <a href="https://www.codecogs.com/eqnedit.php?latex=e^{(k&plus;1)}&space;=&space;x^{(k&plus;1)}&space;-&space;x^{*}&space;\texttt{&space;and&space;}&space;Tx^{k}&space;=&space;x^{(k&plus;1)}&space;\hspace{1mm}&space;(1)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?e^{(k&plus;1)}&space;=&space;x^{(k&plus;1)}&space;-&space;x^{*}&space;\texttt{&space;and&space;}&space;Tx^{k}&space;=&space;x^{(k&plus;1)}&space;\hspace{1mm}&space;(1)" title="e^{(k+1)} = x^{(k+1)} - x^{*} \texttt{ and } Tx^{k} = x^{(k+1)} \hspace{1mm} (1)" /></a>  
+
+    <a href="https://www.codecogs.com/eqnedit.php?latex=\left&space;\|&space;x^{(k&plus;1)}&space;-&space;x^{*}&space;\right&space;\|&space;=&space;\left&space;\|&space;Tx^{k}&space;-&space;Tx^{*}&space;\right&space;\|&space;=&space;\left&space;\|&space;T(x^{k}&space;-&space;x^{*})&space;\right&space;\|&space;\leq&space;\left&space;\|&space;T&space;\right&space;\|&space;\left&space;\|&space;e^{k}&space;\right&space;\|&space;(2)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\left&space;\|&space;x^{(k&plus;1)}&space;-&space;x^{*}&space;\right&space;\|&space;=&space;\left&space;\|&space;Tx^{k}&space;-&space;Tx^{*}&space;\right&space;\|&space;=&space;\left&space;\|&space;T(x^{k}&space;-&space;x^{*})&space;\right&space;\|&space;\leq&space;\left&space;\|&space;T&space;\right&space;\|&space;\left&space;\|&space;e^{k}&space;\right&space;\|&space;(2)" title="\left \| x^{(k+1)} - x^{*} \right \| = \left \| Tx^{k} - Tx^{*} \right \| = \left \| T(x^{k} - x^{*}) \right \| \leq \left \| T \right \| \left \| e^{k} \right \| (2)" /></a>  
+
+    <a href="https://www.codecogs.com/eqnedit.php?latex=\left&space;\|&space;T^{k}&space;\right&space;\|&space;\leq&space;\left&space;\|&space;T&space;\right&space;\|^{k}&space;\hspace{1mm}&space;(3)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\left&space;\|&space;T^{k}&space;\right&space;\|&space;\leq&space;\left&space;\|&space;T&space;\right&space;\|^{k}&space;\hspace{1mm}&space;(3)" title="\left \| T^{k} \right \| \leq \left \| T \right \|^{k} \hspace{1mm} (3)" /></a>  
+
+    <a href="https://www.codecogs.com/eqnedit.php?latex=\texttt{knowing&space;(3),&space;apply&space;equation&space;(2)&space;k&space;times&space;to&space;get:&space;}\left&space;\|&space;e^{(k)}&space;\right&space;\|_{\infty}&space;\leq&space;\left&space;\|&space;T&space;\right&space;\|_{\infty}^{k}\left&space;\|&space;e^{(0)}&space;\right&space;\|_{\infty}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\texttt{knowing&space;(3),&space;apply&space;equation&space;(2)&space;k&space;times&space;to&space;get:&space;}\left&space;\|&space;e^{(k)}&space;\right&space;\|_{\infty}&space;\leq&space;\left&space;\|&space;T&space;\right&space;\|_{\infty}^{k}\left&space;\|&space;e^{(0)}&space;\right&space;\|_{\infty}" title="\texttt{knowing (3), apply equation (2) k times to get: }\left \| e^{(k)} \right \|_{\infty} \leq \left \| T \right \|_{\infty}^{k}\left \| e^{(0)} \right \|_{\infty}" /></a>
 
 ## Problem 2
 
@@ -252,6 +258,8 @@ The solutions to the systems in part a and b have been given below:
 
 <img src = "../hw-3/outp3.png">
 
+The output shows vast difference in sooluttions for small variance in b vector. This could likely be due to the vast difference in the condition numbers when using the L<sub>2</sub> and L<sub>1</sub> = L<sub>∞</sub> norm. The matrices in either case appear to be well conditioned. 
+
 ## Problem 4
 
 1. The matrix *A* in question is shown below. We can prove that *A* is singular by proving that *A* is not invertible since singular matrices, by definition, do not have inverses.  
@@ -347,7 +355,7 @@ The solutions to the systems in part a and b have been given below:
         A_inv = np.linalg.inv(A)
         b = np.array([0.1,0.3,0.5])
 
-        k_cond = np.linalg.norm(A, np.inf) * np.linalg.norm(A_inv, np.inf)
+        k_cond = np.linalg.cond(A)
 
         x = np.zeros(3)
         y = np.zeros(3)

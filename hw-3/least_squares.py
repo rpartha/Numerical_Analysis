@@ -99,4 +99,7 @@ print('Part B x:')
 print(x)
 
 print('K(A^T*A):')
-print(np.linalg.cond(A.transpose().dot(A)))
+print(np.linalg.cond(A.transpose().dot(A), np.inf))
+print(np.linalg.cond(A.transpose().dot(A), 1))
+print(np.linalg.cond(A.transpose().dot(A), 'fro'))
+print(np.linalg.cond(A.transpose().dot(A), 2))

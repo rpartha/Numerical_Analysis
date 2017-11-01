@@ -64,7 +64,7 @@ def main():
     A_inv = np.linalg.inv(A)
     b = np.array([0.1,0.3,0.5])
 
-    k_cond = np.linalg.norm(A, np.inf) * np.linalg.norm(A_inv, np.inf)
+    k_cond = np.linalg.cond(A)
 
     x = np.zeros(3)
     y = np.zeros(3)
