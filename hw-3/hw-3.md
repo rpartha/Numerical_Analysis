@@ -7,9 +7,9 @@ Ramaseshan Parthasarathy, Saurabh Prasad
 
 1. The steps to show that the inequality holds is shown below:
 
-   <img src = "../hw-3/p1a1.gif"> 
-   <img src = "../hw-3/p1a2.gif">  
-   <img src = "../hw-3/p1a3.gif">  
+   <img src = "../hw-3/p1a1.gif">  <br/> 
+   <img src = "../hw-3/p1a2.gif">    
+   <img src = "../hw-3/p1a3.gif">    
 
 2. The proof is rather straight forward:
 
@@ -25,12 +25,12 @@ Ramaseshan Parthasarathy, Saurabh Prasad
 
 5. Combining steps 1 - 4 would use the following steps to arrive at the final inequality:
 
-   <img src = "../hw-3/p1e1.gif">  
+   <img src = "../hw-3/p1e1.gif"> 
 
-   <img src = "../hw-3/p1e2.gif">  
+   <img src = "../hw-3/p1e2.gif">  <br/>
 
-   <img src = "../hw-3/p1e3.gif">  
-     
+   <img src = "../hw-3/p1e3.gif">  <br/>
+
    <img src = "../hw-3/p1e4.gif">  
 
 ## Problem 2
