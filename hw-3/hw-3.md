@@ -5,7 +5,9 @@ Ramaseshan Parthasarathy, Saurabh Prasad
 
 ## Problem 1
 
-1. to be done
+1. 
+
+<a href="https://www.codecogs.com/eqnedit.php?latex=\inline&space;\left&space;\|&space;T^{k}&space;\right&space;\|&space;=&space;max_{x\neq&space;0}&space;\frac{\left&space;\|&space;T^{k}x&space;\right&space;\|}{\left&space;\|&space;x&space;\right&space;\|}&space;\geq&space;\frac{\left&space;\|&space;T^{k}y&space;\right&space;\|}{\left&space;\|&space;y&space;\right&space;\|}&space;\Rightarrow&space;\left&space;\|&space;T^{k}y&space;\right&space;\|&space;=&space;\left&space;\|&space;T&space;\right&space;\|^{k}\left&space;\|&space;y&space;\right&space;\|,&space;\hspace{1mm}&space;y&space;\in&space;\mathbb{R}^{n}&space;(y&space;\neq&space;0)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\inline&space;\left&space;\|&space;T^{k}&space;\right&space;\|&space;=&space;max_{x\neq&space;0}&space;\frac{\left&space;\|&space;T^{k}x&space;\right&space;\|}{\left&space;\|&space;x&space;\right&space;\|}&space;\geq&space;\frac{\left&space;\|&space;T^{k}y&space;\right&space;\|}{\left&space;\|&space;y&space;\right&space;\|}&space;\Rightarrow&space;\left&space;\|&space;T^{k}y&space;\right&space;\|&space;=&space;\left&space;\|&space;T&space;\right&space;\|^{k}\left&space;\|&space;y&space;\right&space;\|,&space;\hspace{1mm}&space;y&space;\in&space;\mathbb{R}^{n}&space;(y&space;\neq&space;0)" title="\left \| T^{k} \right \| = max_{x\neq 0} \frac{\left \| T^{k}x \right \|}{\left \| x \right \|} \geq \frac{\left \| T^{k}y \right \|}{\left \| y \right \|} \Rightarrow \left \| T^{k}y \right \| = \left \| T \right \|^{k}\left \| y \right \|, \hspace{1mm} y \in \mathbb{R}^{n} (y \neq 0)" /></a>
 
 2. 
 
@@ -15,9 +17,13 @@ Ramaseshan Parthasarathy, Saurabh Prasad
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=x^{*}&space;=&space;Tx^{*}&space;&plus;&space;c&space;\newline&space;\newline&space;x^{(k&plus;1)}&space;\hspace{1mm}&space;-&space;\hspace{1mm}&space;x^{*}&space;=&space;Tx^{(k)}&space;&plus;&space;c&space;-&space;(Tx^{*}&space;&plus;&space;c)&space;\newline&space;\newline&space;e^{(k&plus;1)}&space;=&space;T(x^{(k)}&space;-&space;x^{*})&space;\newline&space;\newline&space;\mathbf{e^{(k&plus;1)}&space;=&space;Te^{(k)}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?x^{*}&space;=&space;Tx^{*}&space;&plus;&space;c&space;\newline&space;\newline&space;x^{(k&plus;1)}&space;\hspace{1mm}&space;-&space;\hspace{1mm}&space;x^{*}&space;=&space;Tx^{(k)}&space;&plus;&space;c&space;-&space;(Tx^{*}&space;&plus;&space;c)&space;\newline&space;\newline&space;e^{(k&plus;1)}&space;=&space;T(x^{(k)}&space;-&space;x^{*})&space;\newline&space;\newline&space;\mathbf{e^{(k&plus;1)}&space;=&space;Te^{(k)}}" title="x^{*} = Tx^{*} + c \newline \newline x^{(k+1)} \hspace{1mm} - \hspace{1mm} x^{*} = Tx^{(k)} + c - (Tx^{*} + c) \newline \newline e^{(k+1)} = T(x^{(k)} - x^{*}) \newline \newline \mathbf{e^{(k+1)} = Te^{(k)}}" /></a>  
 
-4. to be done
+4. 
 
-5. to be done
+<a href="https://www.codecogs.com/eqnedit.php?latex=\inline&space;\left&space;\|&space;T&space;\right&space;\|_{\infty}&space;=&space;\frac{\underset{i}{max}&space;\sum_{i=1}^{n}&space;\left&space;|&space;T_{ij}&space;\right&space;|}{\left&space;|&space;T_{ii}&space;\right&space;|}&space;<&space;1,&space;\hspace{1mm}&space;\left&space;|&space;T_{ii}&space;\right&space;|&space;>&space;\sum_{j=2}^{n}&space;\left&space;|&space;T_{ij}&space;\right&space;|&space;=&space;\texttt{diagonal&space;entry}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\inline&space;\left&space;\|&space;T&space;\right&space;\|_{\infty}&space;=&space;\frac{\underset{i}{max}&space;\sum_{i=1}^{n}&space;\left&space;|&space;T_{ij}&space;\right&space;|}{\left&space;|&space;T_{ii}&space;\right&space;|}&space;<&space;1,&space;\hspace{1mm}&space;\left&space;|&space;T_{ii}&space;\right&space;|&space;>&space;\sum_{j=2}^{n}&space;\left&space;|&space;T_{ij}&space;\right&space;|&space;=&space;\texttt{diagonal&space;entry}" title="\left \| T \right \|_{\infty} = \frac{\underset{i}{max} \sum_{i=1}^{n} \left | T_{ij} \right |}{\left | T_{ii} \right |} < 1, \hspace{1mm} \left | T_{ii} \right | > \sum_{j=2}^{n} \left | T_{ij} \right | = \texttt{diagonal entry}" /></a>  
+
+5. Combining steps 1 - 4 would arrive at the conclusion that
+
+    <a href="https://www.codecogs.com/eqnedit.php?latex=\inline&space;\left&space;\|&space;e^{(k)}&space;\right&space;\|_{\infty}&space;\leq&space;\left&space;\|&space;T&space;\right&space;\|_{\infty}^{k}\left&space;\|&space;e^{(0)}&space;\right&space;\|_{\infty}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\inline&space;\left&space;\|&space;e^{(k)}&space;\right&space;\|_{\infty}&space;\leq&space;\left&space;\|&space;T&space;\right&space;\|_{\infty}^{k}\left&space;\|&space;e^{(0)}&space;\right&space;\|_{\infty}" title="\left \| e^{(k)} \right \|_{\infty} \leq \left \| T \right \|_{\infty}^{k}\left \| e^{(0)} \right \|_{\infty}" /></a>
 
 ## Problem 2
 
@@ -318,9 +324,10 @@ print(np.linalg.cond(A.transpose().dot(A)))
 
     def main():
         A = np.matrix([[0.1,0.2,0.3],[0.4,0.5,0.6],[0.7,0.8,0.9]])
+        A_inv = np.linalg.inv(A)
         b = np.array([0.1,0.3,0.5])
 
-        k_cond = np.linalg.cond(A)
+        k_cond = np.linalg.norm(A, np.inf) * np.linalg.norm(A_inv, np.inf)
 
         x = np.zeros(3)
         y = np.zeros(3)
