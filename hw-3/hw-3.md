@@ -7,31 +7,31 @@ Ramaseshan Parthasarathy, Saurabh Prasad
 
 1. The steps to show that the inequality holds is shown below:
 
-   <img src = "p1a1.gif">  <br/> 
-   <img src = "p1a2.gif">    
-   <img src = "p1a3.gif">    
+   <img src = "img/p1a1.gif">  <br/> 
+   <img src = "img/p1a2.gif">    
+   <img src = "img/p1a3.gif">    
 
 2. The proof is rather straight forward:
 
-    <img src = "p1b.gif">  
+    <img src = "img/p1b.gif">  
 
 3. Using the previous part, the following can be shown:
 
-   <img src = "p1c.gif">    
+   <img src = "img/p1c.gif">    
 
 4. Note that the fact that A is *diagonal dominant*, meaning every diagonal entry is greater than the sum of all other entries in its row
 
-    <img src = "p1d.gif">  
+    <img src = "img/p1d.gif">  
 
 5. Combining steps 1 - 4 would use the following steps to arrive at the final inequality:
 
-   <img src = "p1e1.gif"> 
+   <img src = "img/p1e1.gif"> 
 
-   <img src = "p1e2.gif">  <br/>
+   <img src = "img/p1e2.gif">  <br/>
 
-   <img src = "p1e3.gif">  <br/>
+   <img src = "img/p1e3.gif">  <br/>
 
-   <img src = "p1e4.gif">  
+   <img src = "img/p1e4.gif">  
 
 ## Problem 2
 
@@ -134,13 +134,13 @@ if __name__ == "__main__":
 ```
 The output plot(s) of the above program have been provided for convenience:
 
-<img src = "plot_given.png">  
-<img src = "plot0.png">  
-<img src = "plot1.png">  
-<img src = "plot2.png">  
-<img src = "plot3.png">  
-<img src = "plot4.png">  
-<img src = "plot5.png">  
+<img src = "img/plot_given.png">  
+<img src = "img/plot0.png">  
+<img src = "img/plot1.png">  
+<img src = "img/plot2.png">  
+<img src = "img/plot3.png">  
+<img src = "img/plot4.png">  
+<img src = "img/plot5.png">  
 
 From the plots, it can, of course, be seen that polynomial with degree n = 5 displays the best trend for the data. 
 
@@ -253,7 +253,7 @@ print(np.linalg.cond(A.transpose().dot(A)))
 
 The solutions to the systems in part a and b have been given below:
 
-<img src = "outp3.png">
+<img src = "img/outp3.png">
 
 The output shows vast difference in sooluttions for small variance in b vector. This could likely be due to the vast difference in the condition numbers when using the L<sub>2</sub> and L<sub>1</sub> = L<sub>$\infty$</sub> norm. The matrices in either case appear to be well conditioned. 
 
@@ -261,25 +261,25 @@ The output shows vast difference in sooluttions for small variance in b vector. 
 
 1. The matrix *A* in question is shown below. We can prove that *A* is singular by proving that *A* is not invertible since singular matrices, by definition, do not have inverses.  
 
-    <img src = "p4a1.gif">  
+    <img src = "img/p4a1.gif">  
 
     The determinant can be computed by expanding from the first row:  
 
-    <img src = "p4a2.gif">  
+    <img src = "img/p4a2.gif">  
 
     Knowing that *A* is singular, we can attempt to solve the system *Ax* = *b* below by first setting up the augmented matrix *A&#42;*:
 
-    <img src = "p4a3.gif"> 
+    <img src = "img/p4a3.gif"> 
 
     The following steps outline the row operations that can be performed on this matrix:
 
-    <img src = "p4a4.gif">  
+    <img src = "img/p4a4.gif">  
 
-    <img src = "p4a5.gif">
+    <img src = "img/p4a5.gif">
 
     We can conclude, based upon the zero in the last column of *A&#42;*, that *A* and *b* are of the same rank. That tells us that the matrix is consistent and has an infinite amount of solutions. We can therefore arrive at a solution by picking an arbitrary *x*<sub>3</sub> and performing backward substitution. The result is as follows:
 
-    <img src = "p4a6.gif">
+    <img src = "img/p4a6.gif">
 
 2. Using Gaussian Elimination with partial pivoting using exact arithmetic, the process would fail at the second iteration, at which point there are zero entries in the last row of *A&#42;*. This process was briefly outlined in the previous part.
 
@@ -372,6 +372,6 @@ The output shows vast difference in sooluttions for small variance in b vector. 
 
     The output of the above code is as follows:
 
-    <img src = "out.png">
+    <img src = "img/out.png">
 
     What's interesting to point out is that the solution does match the description answered in part 1. Our small calculations indicated that the system could have one of infinite solutions. The computed solution gave us one such solution in the form of a 3x1 vector and a condition number of 2.11189683358e+16 was estimated. It should be duely noted that machine epislon is typically on the order of 10<sup>-16</sup> (which can easily be found using np.finfo(float).eps), where as our computation resulted in an order of 10<sup>+16</sup>. 
