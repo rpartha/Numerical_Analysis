@@ -23,27 +23,28 @@ def solve_lower(U,v):
         if(U[j,j] == 0):
             print('Matrix is singular')
             return
-        v[j] = max(np.absolute(c[j]-1/U[j,j]),np.absolute(c[j]+1/U[j,j])) 
-        #v[j] = c[j]/U[j,j]
+        v[j] = max(math.fabs(c[j]-1/U[j,j]),math.fabs(c[j]+1/U[j,j])) 
         for i in range(j+1,n):
             c[i] = c[i] - U[i,j]*v[j]
+
+def error(exact, approx):
+    return ((exact - approx)/exact) * 100
     
 def main():
+    #first matrix
     A1 = np.array([[10.,-7.,0.],[5.,-1.,5.],[-3.,2.,6.]])
     normA1 = computeL1norm(A1)
-    
     
     P,L,U = lu(A1,permute_l=False)
     U_t = U.transpose()
     L_t = L.transpose()
     A_t = U_t.dot(L_t)
 
-    m = U_t.shape[1]
-    #print(U_t)
+    n = U_t.shape[1]
 
-    v = np.zeros(m)
-    y = np.zeros(m)
-    z = np.zeros(m)
+    v = np.zeros(n)
+    y = np.zeros(n)
+    z = np.zeros(n)
 
     solve_lower(U_t, v)
     y = np.linalg.solve(L_t, v)
@@ -53,19 +54,20 @@ def main():
     
     print('real condition number for A1: ', np.linalg.cond(A1,1))
     print('computed condition number for A1: ', k)
+    print('error for A1: ', error(np.linalg.cond(A1,1), k), '%')
 
     A2 = np.array([[92.,66.,25.],[-73.,78.,24.],[-80.,37.,10.]])
     normA2 = computeL1norm(A2)
 
     P,L,U = lu(A2,permute_l=False)
-    U_t = np.transpose(U)
-    L_t = np.transpose(L)
-    m = U_t.shape[1]
-    #print(U_t)
+    U_t = U.transpose()
+    L_t = L.transpose()
 
-    v = np.zeros(m)
-    y = np.zeros(m)
-    z = np.zeros(m)
+    n = U_t.shape[1]
+
+    v = np.zeros(n)
+    y = np.zeros(n)
+    z = np.zeros(n)
 
     solve_lower(U_t, v)
 
@@ -76,6 +78,7 @@ def main():
     
     print('real condition number for A2: ', np.linalg.cond(A2,1))
     print('computed condition number for A2: ', k)
+    print('error for A2: ', error(np.linalg.cond(A2,1), k), '%')
 
 if __name__ == "__main__":
     main()
