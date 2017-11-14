@@ -3,7 +3,7 @@ Ramaseshan Parthasarathy, Saurabh Prasad
 
 ## Problem 1
 
-1. The method does converge to f(x) = 0:
+1. The method does converge to f(x) = 0:  
     <img src = "../hw-4/img/p1a1.gif">  
     <img src = "../hw-4/img/p1a2.gif">  
     <img src = "../hw-4/img/p1a3.gif">  
