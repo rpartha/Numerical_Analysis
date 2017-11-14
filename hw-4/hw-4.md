@@ -3,15 +3,21 @@ Ramaseshan Parthasarathy, Saurabh Prasad
 
 ## Problem 1
 
-1. The method does converge to f(x) = 0:  
+1. The method does converge to f(x) = 0:    
     <img src = "../hw-4/img/p1a1.gif">  
     <img src = "../hw-4/img/p1a2.gif">  
     <img src = "../hw-4/img/p1a3.gif">  
 
-2. This method does converge under the same conditions as Newton's method:
+2. This method does converge under the same conditions as Newton's method:  
+    <img src = "../hw-4/img/p1b1.gif">    
+    <img src = "../hw-4/img/p1b2.gif">    
+    <img src = "../hw-4/img/p1b3.gif">   
+    <img src = "../hw-4/img/p1b4.gif">   
 
-3. The order of convergence is 1:
-
+3. The order of convergence is 1:  
+    <img src = "../hw-4/img/p1c1.gif">    
+    <img src = "../hw-4/img/p1c2.gif">    
+    <img src = "../hw-4/img/p1c3.gif">  
 
 
 ## Problem 2
@@ -92,7 +98,7 @@ def Secant(f,x1,x0):
 	ek=np.zeros(iterations);
 	for i in range(iterations):
 		ek[i]=math.log10(math.fabs(xnew-sol[i]))# Compute error at each iteration
-	z=np.polyfit(ek[0:ek.shape[0]-1],ek[1:ek.shape[0]],1)# Fit line through (x,y)->(log|e(k)|,log|e(k+1)|)
+	z=np.polyfit(ek[0:ek.shape[0]-1],ek[1:ek.shape[0]],1)# Fit line thru (x,y)->(log|e(k)|,log|e(k+1)|)
 	print('Order of convergence',z[0])
 	print('Iterations=',iterations)
 	return xnew
