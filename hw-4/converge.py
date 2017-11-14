@@ -27,6 +27,7 @@ def fpiters(g, x0, maxiter):
     xp = []
     xp.insert(0,2)
     for i in range(0,maxiter,1):
+        print('iteration: ', i)
         t = xp[i]
         x = g(t)
         xp.insert(i+1, x)
@@ -37,9 +38,9 @@ def fixedp(f,x0,tol=10e-6,maxiter=100):
     """ Fixed point algorithm """
     e = 1
     itr = 0
-    x = 2.5
     xp = []
-    while(e < tol and itr < maxiter):
+    x = 2.5
+while(e < tol):
         x = f(x0)      # fixed point equation
         #print(x)
         e = np.linalg.norm(x-x0) # error at the current step
@@ -47,6 +48,7 @@ def fixedp(f,x0,tol=10e-6,maxiter=100):
         xp.append(x0)  # save the for i in range(0, 100)]solution of the current step
         #print(xp[itr])
         itr = itr + 1
+        print(itr)
     return x,xp
 
 def main():
@@ -55,7 +57,9 @@ def main():
     g3 = lambda x: 3 - 2/x
     g4 = lambda x: (pow(x,2)-2)/(2*x - 3)
 
-    fpiters(g2, 2, 20)
+    x,xp = fixedp(g2, 1.5)
+
+    print(x)
 
 if __name__ == "__main__":
     main()
