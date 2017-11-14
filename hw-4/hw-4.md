@@ -13,6 +13,7 @@ Ramaseshan Parthasarathy, Saurabh Prasad
     <img src = "../hw-4/img/p1b2.gif">    
     <img src = "../hw-4/img/p1b3.gif">   
     <img src = "../hw-4/img/p1b4.gif">   
+    <img src = "../hw-4/img/p1b5.gif">   
 
 3. The order of convergence is 1:  
     <img src = "../hw-4/img/p1c1.gif">    
