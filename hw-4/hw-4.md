@@ -11,7 +11,9 @@ Ramaseshan Parthasarathy, Saurabh Prasad
 2. This method does converge under the same conditions as Newton's method:  
     <img src = "../hw-4/img/p1b1.gif">    
     <img src = "../hw-4/img/p1b2.gif">    
-    <img src = "../hw-4/img/p1b3.gif">   
+    <img src = "../hw-4/img/p1b3a.gif">  
+    <img src = "../hw-4/img/p1b3b.gif">  
+    <img src = "../hw-4/img/p1b3c.gif">     
     <img src = "../hw-4/img/p1b4.gif">   
     <img src = "../hw-4/img/p1b5.gif">   
 
