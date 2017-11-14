@@ -9,7 +9,10 @@ Ramaseshan Parthasarathy, Saurabh Prasad
     <img src = "../hw-4/img/p2g1.gif">        
     <img src = "../hw-4/img/p2g2.gif">      
     <img src = "../hw-4/img/p2g3.gif">   
-    <img src = "../hw-4/img/p2g4.gif">     
+    <img src = "../hw-4/img/p2g4.gif">  
+    <img src = "../hw-4/img/p2-1-blurb.gif">  
+
+2. Verifying my analysis:   
 
 
 ## Problem 3
