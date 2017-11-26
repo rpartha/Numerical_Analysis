@@ -7,7 +7,6 @@ Ramaseshan Parthasarathy, Saurabh Prasad
     <img src = "../hw-4/img/p1a1.gif">  
     <img src = "../hw-4/img/p1a2.gif">  
     <img src = "../hw-4/img/p1a3.gif">  
-
 2. This method does converge under the same conditions as Newton's method:  
     <img src = "../hw-4/img/p1b1.gif">    
     <img src = "../hw-4/img/p1b2.gif">    
@@ -16,12 +15,10 @@ Ramaseshan Parthasarathy, Saurabh Prasad
     <img src = "../hw-4/img/p1b3c.gif">     
     <img src = "../hw-4/img/p1b4.gif">   
     <img src = "../hw-4/img/p1b5.gif">   
-
 3. The order of convergence is 1:  
     <img src = "../hw-4/img/p1c1.gif">    
     <img src = "../hw-4/img/p1c2.gif">    
     <img src = "../hw-4/img/p1c3.gif">  
-
 
 ## Problem 2
 
@@ -32,14 +29,46 @@ Ramaseshan Parthasarathy, Saurabh Prasad
     <img src = "../hw-4/img/p2g4.gif">  
     <img src = "../hw-4/img/p2-1-blurb.gif">  
 
-2. Verifying my analysis:   
+2. Verifying my analysis: 
 
+```Python
+def fixedp(f,x0,eps=10e-6,n=100):
+    """ Fixed point algorithm """
+    e = 1
+    itr = 0
+    xp = []
+    x = 2.5
+    while(e > eps):
+        x = f(x0)     
+        #print(x)
+        e = np.linalg.norm(np.fabs(x-x0))
+        x0 = x
+        xp.append(x0) 
+        #print(xp[itr])
+        itr = itr + 1
+        print(itr)
+    return x,xp
+
+def main():
+    g1 = lambda x: (pow(x, 2) + 2)/3
+    g2 = lambda x: math.sqrt(3*x - 2)
+    g3 = lambda x: 3 - 2/x
+    g4 = lambda x: (pow(x,2)-2)/(2*x - 3)
+
+    x,xp = fpiters(g1, 2.1, 100)
+
+    print(x)
+
+if __name__ == "__main__":
+    main()
+```
+The results came out as expected.
 
 ## Problem 3
 
 The code for Bisection, Secant, and Newton methods for solving 1-D nonlinear equations is given below:
 
-```python
+```Python
 import numpy as np
 import math
 maxIterations=1000000
@@ -143,6 +172,7 @@ print("Bisection method on problem 1")
 sol=bisect(f1,0,5)
 print('x=',sol)
 ```
+The termination criterion that was used here was checking the absolute difference of x is greater than epsilon (threshold or not).
 
 ## Problem 4
 

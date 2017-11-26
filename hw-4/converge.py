@@ -1,9 +1,6 @@
 import numpy as np
 import math as math
 
-def g1(x):
-    g = (pow(x,2) + 2)/3
-    return g
 """
 def fpiters(g,x_true, eps):
     numIters = 10
@@ -23,29 +20,30 @@ def fpiters(g,x_true, eps):
     return x
 """
 
-def fpiters(g, x0, maxiter):
+def fpiters(g, x0, n):
     xp = []
     xp.insert(0,2)
-    for i in range(0,maxiter,1):
+    for i in range(0,n,1):
         print('iteration: ', i)
         t = xp[i]
         x = g(t)
         xp.insert(i+1, x)
         print(xp[i])
+    return x, xp
 
 
-def fixedp(f,x0,tol=10e-6,maxiter=100):
+def fixedp(f,x0,eps=10e-6,n=100):
     """ Fixed point algorithm """
     e = 1
     itr = 0
     xp = []
     x = 2.5
-while(e < tol):
-        x = f(x0)      # fixed point equation
+    while(e > eps):
+        x = f(x0)     
         #print(x)
-        e = np.linalg.norm(x-x0) # error at the current step
+        e = np.linalg.norm(np.fabs(x-x0))
         x0 = x
-        xp.append(x0)  # save the for i in range(0, 100)]solution of the current step
+        xp.append(x0) 
         #print(xp[itr])
         itr = itr + 1
         print(itr)
@@ -57,7 +55,7 @@ def main():
     g3 = lambda x: 3 - 2/x
     g4 = lambda x: (pow(x,2)-2)/(2*x - 3)
 
-    x,xp = fixedp(g2, 1.5)
+    x,xp = fpiters(g1, 2.1, 100)
 
     print(x)
 
