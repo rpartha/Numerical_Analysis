@@ -26,7 +26,8 @@ Ramaseshan Parthasarathy, Ashwin Sethi
 ### Part B
 ![](img/p3b1.gif "lagrange1")  
 ![](img/p3b2.gif "lagrange2")  
-![](img/p3b3.gif "lagrange3")
+![](img/p3b3.gif "lagrange3")  
+![](img/p3b4.gif "lagrange4")
 
 ### Part C
 
